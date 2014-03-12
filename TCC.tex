@@ -1,0 +1,165 @@
+\include{fixos/pacoteseclass}
+
+% Informações de dados para CAPA e FOLHA DE ROSTO
+\titulo{Uma Abordagem de Algoritmo para Realização de Cálculos}
+\autor{Francisco Fulano da Silva Chagas}
+\local{Quixadá, Ceará}
+\data{2014}
+\orientador{Profa. Dra. Rita de Gomes}
+\coorientador{Prof. Dr. Beltrano da Silva}
+
+% Escolher curso: Redes de Computadores (rc), Eng.Software (es), Ciências da Computação (cc) ou Sist.Informação (si)
+%\include{fixos/instituicao/rc}
+%\include{fixos/instituicao/si}
+\include{fixos/instituicao/es}
+%\include{fixos/instituicao/cc}
+
+\begin{document}
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+% Capa
+\imprimircapa
+% Folha de rosto (* indica que haverá a ficha bibliográfica)
+\imprimirfolhaderosto*
+
+% Ficha Bibliográfica
+\include{fixos/fichabibliografica}
+
+% Errata
+%\include{editaveis/errata}
+
+% Folha de Aprovação
+% DEVE ser modificada para adicionar os membros da banca
+\include{editaveis/folhadeaprovacao}
+%\imprimirfolhadeaprovacao
+
+% Dedicatória
+\include{editaveis/dedicatoria}
+
+% Agradecimentos
+\include{editaveis/agradecimentos}
+
+% Epígrafe
+\include{editaveis/epigrafe}
+
+% RESUMOS
+\include{resumo/ptbr}
+\include{resumo/us}
+%\include{resumo/fr}
+%\include{resumo/es}
+
+% Lista de ilustrações
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+% Lista de tabelas
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% Abreviaturas e Siglas
+\include{editaveis/siglas}
+
+% Símbolos
+\include{editaveis/simbolos}
+
+% Sumário
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
+% ----------------------------------------------------------
+\include{introducao}
+
+% ----------------------------------------------------------
+% PARTE I
+% ----------------------------------------------------------
+\part{Preparação da pesquisa}
+
+% Capitulo com exemplos de comandos inseridos de arquivo externo 
+\include{abntex2-modelo-include-comandos}
+
+% ----------------------------------------------------------
+% PARTE II
+% ----------------------------------------------------------
+\part{Referenciais teóricos}
+
+% Capitulo de revisão de literatura
+\chapter{Lorem ipsum dolor sit amet}
+
+\section{Aliquam vestibulum fringilla lorem}
+
+\lipsum[1]
+
+\lipsum[2-3]
+
+% ----------------------------------------------------------
+% PARTE III
+% ----------------------------------------------------------
+\part{Resultados}
+
+% ---
+% primeiro capitulo de Resultados
+\chapter{Lectus lobortis condimentum}
+
+\section{Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae}
+
+\lipsum[21-22]
+
+% ---
+% segundo capitulo de Resultados
+\chapter{Nam sed tellus sit amet lectus urna ullamcorper tristique interdum elementum}
+
+\section{Pellentesque sit amet pede ac sem eleifend consectetuer}
+
+\lipsum[24]
+
+% ----------------------------------------------------------
+% Finaliza a parte no bookmark do PDF para que se inicie o bookmark na raiz e adiciona espaço de parte no Sumário
+% ----------------------------------------------------------
+\phantompart
+
+% ---
+% Conclusão (outro exemplo de capítulo sem numeração e presente no sumário)
+\chapter*[Conclusão]{Conclusão}
+\addcontentsline{toc}{chapter}{Conclusão}
+
+\lipsum[31-33]
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% Referências bibliográficas
+\bibliography{bibtex/referencias}
+
+% Glossário (Consulte o manual da classe abntex2 para orientações sobre o glossário)
+%\glossary
+
+% Apêndices
+%\include{editaveis/apendices}
+
+% Anexos
+%\include{editaveis/anexos}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+\phantompart
+\printindex
+%---------------------------------------------------------------------
+
+\end{document}
